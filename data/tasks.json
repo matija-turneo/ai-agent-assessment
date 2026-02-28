@@ -1,0 +1,115 @@
+[
+  {
+    "id": "check_in",
+    "name": "Basic Check-in Questions",
+    "opening_line": "Hi! I'm arriving tomorrow and wanted to check what time is check-in and do you have a place where we can leave our bags if we're arriving early?",
+    "objective": "Find out the check-in time and whether luggage storage is available for early arrivals.",
+    "scoring_notes": [
+      "Fabricating check-in times or luggage facilities that don't exist = L1 (1)",
+      "Telling the guest to call reception or check the website = L2 (3-4)",
+      "This is an informational task — there is nothing to 'book' or 'dispatch', so L3/L4 distinctions apply differently",
+      "Providing accurate check-in time AND luggage storage info with practical details = L4 (7-8)",
+      "Proactively mentioning checkout time, early check-in options, or offering to note the early arrival = L5 (9-10)",
+      "If luggage storage is unavailable, evaluate whether the agent offers alternatives"
+    ]
+  },
+  {
+    "id": "book_room",
+    "name": "Book a Room",
+    "opening_line": "Hi, I'm interested in booking a room at your hotel. What options do you have available?",
+    "objective": "Get a list of available room types, pick one, and complete or initiate a booking.",
+    "scoring_notes": [
+      "Fabricating room types, prices, or amenities = L1 (1)",
+      "Sending a booking link without gathering preferences = L2 (3-4)",
+      "Gathering preferences and sending a pre-filtered booking link = still L2 (4) because the guest completes the booking elsewhere",
+      "Gathering all details (dates, room type, guests) and forwarding a complete booking request to staff = L3 (5-6)",
+      "Gathering data, checking real availability, and sending a payment link = L4 (7-8) — payment link is acceptable here",
+      "Booking confirmed in-system with dates, room type, price, cancellation policy = L4 (8)"
+    ]
+  },
+  {
+    "id": "book_restaurant",
+    "name": "Book a Restaurant",
+    "opening_line": "Hi, I'd like to book a table for dinner tomorrow — is that something I can do here?",
+    "objective": "Reserve a table for 2 at 8pm, mention a nut allergy, and confirm the booking.",
+    "scoring_notes": [
+      "Nut allergy must be addressed — ignoring it or fabricating accommodation is L1 (1)",
+      "Sending a booking link or telling guest to call the restaurant = L2 (3-4)",
+      "Forwarding the reservation request to staff without confirmation = L3 (5-6)",
+      "Checking availability and confirming the booking with details (time, party size, allergy noted) = L4 (7-8)",
+      "If restaurant doesn't exist at the property, evaluate how gracefully the agent communicates this and offers alternatives"
+    ]
+  },
+  {
+    "id": "room_service",
+    "name": "Order Room Service",
+    "opening_line": "Hi, I'm in my room and quite hungry — is room service still available at this hour?",
+    "objective": "Confirm late-night availability, order a burger and a drink, and get an estimated delivery time.",
+    "scoring_notes": [
+      "Saying room service is available when it's closed (or vice versa) = L1 (1)",
+      "Telling the guest to call room service or check the in-room menu = L2 (3-4)",
+      "Forwarding the order to the kitchen without confirming receipt or delivery time = L3 (5-6)",
+      "Taking the order AND confirming it back with delivery estimate = L4 (7-8)",
+      "If room service is unavailable, evaluate whether the agent offers specific alternatives (restaurant, minibar, delivery apps)",
+      "Asking about preferences (how the burger is cooked, drink options) = sign of L4-L5"
+    ]
+  },
+  {
+    "id": "book_spa",
+    "name": "Book a Spa / Experience",
+    "opening_line": "Hi, I'd love to book a massage for tomorrow afternoon if possible.",
+    "objective": "Find out what's available, and book a 60-minute massage at 3pm tomorrow.",
+    "scoring_notes": [
+      "Fabricating treatments, pricing, or availability = L1 (1)",
+      "Telling the guest to call the spa or check a website = L2 (3-4)",
+      "Forwarding a booking request to the spa team without confirmation = L3 (5-6)",
+      "Booking confirmed back to guest with treatment, time, and price = L4 (7-8)",
+      "If spa/experiences don't exist at the property, evaluate how the agent handles it and whether alternatives are offered",
+      "Asking about preferences (therapist, focus areas, add-ons) = sign of L4-L5"
+    ]
+  },
+  {
+    "id": "alert_housekeeping",
+    "name": "Alert Housekeeping",
+    "opening_line": "Hi, I need to flag an issue in my room. The light is flickering. Is this the right place to send a message?",
+    "objective": "Report an issue with the light and get the request handled.",
+    "scoring_notes": [
+      "Fabricating a ticket number or misdirecting the guest = L1 (1)",
+      "Telling the guest to call reception or email maintenance = L2 (3-4)",
+      "Forwarding to maintenance without confirming dispatch or giving a timeline = L3 (5-6)",
+      "Confirming dispatch with a specific timeline ('maintenance within 30 minutes') = L4 (7-8)",
+      "Offering a workaround while waiting (e.g., desk lamp) = sign of L4-L5",
+      "Must ask for room number — not asking is a gap regardless of level"
+    ]
+  },
+  {
+    "id": "out_of_scope",
+    "name": "Unknown / Out-of-Scope Question",
+    "opening_line": "Hi, I have a question about religious facilities at the hotel — do you have a prayer room or chapel on-site?",
+    "objective": "See how the assistant handles something it likely has no information about — does it admit it doesn't know, offer to find out, or make something up?",
+    "scoring_notes": [
+      "Fabricating an answer ('Yes, we have a chapel on the 3rd floor') = L1 (1)",
+      "Saying 'I don't know' with no path forward = L1 (2)",
+      "Telling the guest to call reception = L2 (3-4)",
+      "Forwarding the question to staff but not following up = L3 (5-6)",
+      "Following up with an answer or confirmed timeline = L4 (7-8)",
+      "Treat the question with cultural sensitivity — the question's personal significance matters",
+      "Researching nearby alternatives proactively = sign of L5"
+    ]
+  },
+  {
+    "id": "escalation",
+    "name": "Escalation Request",
+    "opening_line": "Hi, I've asked twice now about my room not being cleaned and nothing has happened. I'd like to speak to a manager.",
+    "objective": "See whether the assistant recognises the need to escalate, responds with empathy, and provides a clear path to a real person.",
+    "scoring_notes": [
+      "Refusing to escalate, gaslighting, or overriding the guest's request for a manager = L1 (1)",
+      "Telling the frustrated guest to call or email a manager themselves = L2 (3-4)",
+      "Forwarding to manager without confirming receipt or giving a timeline = L3 (5-6)",
+      "Confirming manager has been notified with a timeline AND dispatching housekeeping = L4 (7-8)",
+      "Two problems must be addressed: (1) the escalation to a manager, (2) the immediate housekeeping issue",
+      "Empathy is important — validate the repeated failure before jumping to solutions",
+      "Briefing the manager so the guest doesn't have to repeat their story = sign of L5"
+    ]
+  }
+]

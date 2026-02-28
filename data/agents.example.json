@@ -1,0 +1,18 @@
+[
+  {
+    "id": "example_agent",
+    "name": "Example Agent",
+    "url": "https://example.com",
+    "property_name": "Grand Hotel Example",
+    "channel": "Web chat",
+    "status": "has_conversations"
+  },
+  {
+    "id": "another_agent",
+    "name": "Another Agent",
+    "url": null,
+    "property_name": "Seaside Resort Demo",
+    "channel": "WhatsApp",
+    "status": "pending"
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "agent_id": "example_agent",
+  "agent_name": "Example Agent",
+  "property_name": "Grand Hotel Example",
+  "date": "2026-01-15",
+  "tasks": [
+    {
+      "task_id": "check_in",
+      "task_name": "Basic Check-in Questions",
+      "covered": true,
+      "deviation_from_spec": null,
+      "messages": [
+        {
+          "role": "guest",
+          "text": "Hi! I'm arriving tomorrow and wanted to check what time is check-in and do you have a place where we can leave our bags if we're arriving early?"
+        },
+        {
+          "role": "agent",
+          "text": "Welcome! Check-in is at 3:00 PM. We do have a luggage storage area at the front desk where you can leave your bags if you arrive early. Just let reception know when you get here and they'll take care of it."
+        },
+        {
+          "role": "guest",
+          "text": "Perfect, thank you!"
+        }
+      ]
+    },
+    {
+      "task_id": "book_room",
+      "task_name": "Book a Room",
+      "covered": true,
+      "deviation_from_spec": "Guest asked for a double room specifically rather than open-ended 'what options do you have'",
+      "messages": [
+        {
+          "role": "guest",
+          "text": "Hi, do you have any double rooms available for next Friday?"
+        },
+        {
+          "role": "agent",
+          "text": "Let me check availability for you. We have two options for next Friday: a Standard Double at $150/night and a Deluxe Double with city view at $220/night. Both include breakfast. Would you like to book one of these?"
+        },
+        {
+          "role": "guest",
+          "text": "The Deluxe Double sounds great. Can I book that?"
+        },
+        {
+          "role": "agent",
+          "text": "I'd be happy to help. I'll need a few details: your full name, email address, and how many nights you'd like to stay?"
+        },
+        {
+          "role": "guest",
+          "text": "Jane Smith, jane@example.com, 2 nights please."
+        },
+        {
+          "role": "agent",
+          "text": "I've reserved a Deluxe Double with city view for Jane Smith, checking in Friday January 17th for 2 nights (checkout Sunday January 19th). Total: $440. Confirmation #EX-20260117-4A21. You'll receive a confirmation email shortly. Is there anything else I can help with?"
+        }
+      ]
+    },
+    {
+      "task_id": "book_restaurant",
+      "task_name": "Book a Restaurant",
+      "covered": false,
+      "gap": true,
+      "deviation_from_spec": null,
+      "messages": []
+    }
+  ]
+}

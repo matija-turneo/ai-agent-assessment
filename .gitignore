@@ -1,0 +1,11 @@
+.env
+marketing/
+reports/
+data/conversations/*
+!data/conversations/example.json
+data/gap_analysis.md
+data/agents.json
+.DS_Store
+.claude/
+__pycache__/
+*.pyc
